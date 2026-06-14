@@ -4,6 +4,13 @@ import work03 from "@/assets/work-03.jpg";
 import work04 from "@/assets/work-04.jpg";
 import work05 from "@/assets/work-05.jpg";
 
+export type WorkSegment = {
+  title: string;
+  body: string;
+  image?: string;
+  imageCaption?: string;
+};
+
 export type Work = {
   slug: string;
   number: string;
@@ -15,6 +22,7 @@ export type Work = {
   overview: string;
   process: string;
   reflection: string;
+  segments?: WorkSegment[];
 };
 
 export const works: Work[] = [
