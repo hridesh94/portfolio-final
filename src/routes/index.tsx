@@ -99,9 +99,7 @@ function Index() {
                     <h3 className="font-serif text-3xl font-light leading-tight tracking-[-0.01em] md:text-[2.6rem]">
                       {w.title}
                     </h3>
-                    <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.22em] text-foreground/55">
-                      {w.medium} · {w.year}
-                    </p>
+                  </div>
                   </div>
                   <div className="md:col-span-3">
                     <p className="text-[15px] leading-[1.75] text-foreground/75">
