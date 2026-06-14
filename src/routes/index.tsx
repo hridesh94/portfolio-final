@@ -166,7 +166,7 @@ function Index() {
         </Reveal>
 
         <div className="mt-24 grid gap-12 border-t border-rule pt-10 md:grid-cols-4">
-          <FooterItem label="Correspondence" value="hridesh.sap@gmail.com" href="mailto:hridesh.sap@gmail.com" />
+          <FooterItem label="EMAIL" value="hridesh.sap@gmail.com" href="mailto:hridesh.sap@gmail.com" />
           
           <FooterItem label="LinkedIn" value="linkedin.com/in/hrideshsapkota/" href="https://linkedin.com/in/hrideshsapkota/" />
           <FooterItem label="Source" value="github.com/hrides94" href="https://github.com/hrides94" />
