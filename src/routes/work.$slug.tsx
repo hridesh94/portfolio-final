@@ -105,43 +105,96 @@ function WorkPage() {
           </p>
         </Reveal>
 
-        {/* Secondary plates */}
-        <div className="mx-auto mt-32 grid max-w-[1180px] gap-10 md:mt-44 md:grid-cols-12">
-          <Reveal as="figure" className="plate md:col-span-7">
-            <div className="aspect-[4/3] overflow-hidden bg-muted">
-              <img
-                src={work.image}
-                alt=""
-                width={1200}
-                height={900}
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
+        {work.segments && work.segments.length > 0 ? (
+          <div className="mx-auto mt-32 max-w-[1180px] md:mt-44">
+            {work.segments.map((seg, i) => (
+              <Reveal
+                as="section"
+                key={seg.title}
+                className={`grid gap-10 md:grid-cols-12 md:gap-14 ${i > 0 ? "mt-32 md:mt-44" : ""}`}
+              >
+                <figure
+                  className={`plate md:col-span-6 ${i % 2 === 1 ? "md:order-2" : ""}`}
+                >
+                  <div className="aspect-[4/3] overflow-hidden bg-muted">
+                    {seg.image ? (
+                      <img
+                        src={seg.image}
+                        alt={seg.title}
+                        loading="lazy"
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center bg-muted">
+                        <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-foreground/40">
+                          Image — coming soon
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                  {seg.imageCaption && (
+                    <figcaption className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-foreground/45">
+                      {seg.imageCaption}
+                    </figcaption>
+                  )}
+                </figure>
+                <div className="md:col-span-6 md:self-center">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/55">
+                    Chapter · {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-4 font-serif text-3xl font-light leading-[1.15] tracking-[-0.01em] md:text-4xl">
+                    {seg.title}
+                  </h3>
+                  <div className="mt-6 space-y-5 text-[16px] leading-[1.9] text-foreground/80">
+                    {seg.body.split("\n\n").map((para, j) => (
+                      <p key={j}>{para}</p>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        ) : (
+          <>
+            {/* Secondary plates */}
+            <div className="mx-auto mt-32 grid max-w-[1180px] gap-10 md:mt-44 md:grid-cols-12">
+              <Reveal as="figure" className="plate md:col-span-7">
+                <div className="aspect-[4/3] overflow-hidden bg-muted">
+                  <img
+                    src={work.image}
+                    alt=""
+                    width={1200}
+                    height={900}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </Reveal>
+              <Reveal as="figure" delay={150} className="plate md:col-span-5 md:mt-24">
+                <div className="aspect-[3/4] overflow-hidden bg-muted">
+                  <img
+                    src={work.image}
+                    alt=""
+                    width={900}
+                    height={1200}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
-          <Reveal as="figure" delay={150} className="plate md:col-span-5 md:mt-24">
-            <div className="aspect-[3/4] overflow-hidden bg-muted">
-              <img
-                src={work.image}
-                alt=""
-                width={900}
-                height={1200}
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </Reveal>
-        </div>
 
-        {/* Process */}
-        <Reveal as="section" className="mx-auto mt-32 grid max-w-5xl gap-12 md:mt-44 md:grid-cols-12">
-          <h2 className="md:col-span-3 font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/55">
-            Process
-          </h2>
-          <p className="md:col-span-9 text-[17px] leading-[1.9] text-foreground/80">
-            {work.process}
-          </p>
-        </Reveal>
+            {/* Process */}
+            <Reveal as="section" className="mx-auto mt-32 grid max-w-5xl gap-12 md:mt-44 md:grid-cols-12">
+              <h2 className="md:col-span-3 font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/55">
+                Process
+              </h2>
+              <p className="md:col-span-9 text-[17px] leading-[1.9] text-foreground/80">
+                {work.process}
+              </p>
+            </Reveal>
+          </>
+        )}
 
         {/* Reflection */}
         <Reveal as="section" className="mx-auto mt-24 grid max-w-5xl gap-12 md:mt-32 md:grid-cols-12">
