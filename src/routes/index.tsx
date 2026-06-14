@@ -100,7 +100,6 @@ function Index() {
                       {w.title}
                     </h3>
                   </div>
-                  </div>
                   <div className="md:col-span-3">
                     <p className="text-[15px] leading-[1.75] text-foreground/75">
                       {w.description}
