@@ -107,7 +107,7 @@ function WorkPage() {
 
         {work.segments && work.segments.length > 0 ? (
           <div className="mx-auto mt-32 max-w-[1180px] md:mt-44">
-            {work.segments.map((seg, i) => (
+            {work.segments.map((seg: WorkSegment, i: number) => (
               <Reveal
                 as="section"
                 key={seg.title}
