@@ -222,8 +222,8 @@ function Index() {
         </div>
 
         <div className="mt-20 flex flex-col gap-3 text-[10px] uppercase tracking-[0.28em] text-foreground/45 md:flex-row md:items-end md:justify-between">
-          <p className="font-mono">© MMXXV · Hridesh</p>
-          <p className="font-mono">Kathmandu — set in EB Garamond &amp; Inter Tight</p>
+          <p className="font-mono">© HRIDESH</p>
+          <p className="font-mono">FROM THE HIMALAYAS</p>
         </div>
       </footer>
     </main>
