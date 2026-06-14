@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
 import { Reveal } from "@/components/Reveal";
-import { works, worksBySlug } from "@/lib/works";
+import { works, worksBySlug, type WorkSegment } from "@/lib/works";
 
 export const Route = createFileRoute("/work/$slug")({
   loader: ({ params }) => {
