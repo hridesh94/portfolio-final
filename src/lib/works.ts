@@ -22,8 +22,8 @@ export const works: Work[] = [
     slug: "gaine-the-media-man",
     number: "01",
     title: "Gaine, the Media Man",
-    medium: "Interactive Storytelling Website",
-    year: "2024",
+    medium: "INTERACTIVE STORYTELLING WEBSITE",
+    year: "2026",
     description:
       "A digital exploration of Nepal's Gandharva community and their historical role as transmitters of culture and information.",
     image: work01,
@@ -37,9 +37,9 @@ export const works: Work[] = [
   {
     slug: "documentary-practice",
     number: "02",
-    title: "Documentary Practice",
-    medium: "Film and Multimedia",
-    year: "2023",
+    title: "Documentary Production",
+    medium: "OYU GREEN",
+    year: "2024",
     description:
       "Documentary works on clean cooking initiatives and environmental restoration in Nepal.",
     image: work02,

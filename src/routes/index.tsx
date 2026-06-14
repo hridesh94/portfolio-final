@@ -34,12 +34,12 @@ function Index() {
         <div className="flex flex-1 flex-col justify-between">
           <header className="rise-in">
             <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/50">
-              Portfolio · 2025 · Edition 01
+              PORTFOLIO · 2026 · EDITION 01
             </p>
             <h1 className="mt-10 font-serif text-[clamp(3.2rem,9vw,8.5rem)] font-light leading-[0.95] tracking-[-0.02em]">
               Hridesh
               <br />
-              <span className="italic text-foreground/85">Surname</span>
+              <span className="italic text-foreground/85">Sapkota</span>
             </h1>
             <p className="mt-10 max-w-xl font-serif text-2xl font-light leading-snug text-foreground/80 md:text-3xl">
               Media, technology, and stories that shape how we understand the world.
@@ -57,7 +57,6 @@ function Index() {
               className="group inline-flex items-center gap-4 font-mono text-[11px] uppercase tracking-[0.28em] text-foreground/70 transition-opacity hover:opacity-60"
             >
               <span className="h-px w-12 bg-foreground/40 transition-all duration-700 group-hover:w-20" />
-              Enter the exhibition
             </a>
           </div>
         </div>
