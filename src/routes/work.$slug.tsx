@@ -146,7 +146,7 @@ function WorkPage() {
                     {seg.title}
                   </h3>
                   <div className="mt-6 space-y-5 text-[16px] leading-[1.9] text-foreground/80">
-                    {seg.body.split("\n\n").map((para, j) => (
+                    {seg.body.split("\n\n").map((para: string, j: number) => (
                       <p key={j}>{para}</p>
                     ))}
                   </div>
