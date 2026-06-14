@@ -77,19 +77,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Hridesh — Media, technology, and stories" },
+      {
+        name: "description",
+        content:
+          "A small digital exhibition — interactive storytelling, documentary practice, audio, and design by Hridesh.",
+      },
+      { name: "author", content: "Hridesh" },
+      { property: "og:title", content: "Hridesh — Media, technology, and stories" },
+      {
+        property: "og:description",
+        content:
+          "A small digital exhibition — interactive storytelling, documentary practice, audio, and design.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter+Tight:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap",
       },
     ],
   }),
