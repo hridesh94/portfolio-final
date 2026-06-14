@@ -72,7 +72,7 @@ function Index() {
       <section id="work" className="mx-auto max-w-[1480px] px-8 py-24 md:px-12 md:py-40">
         <Reveal as="header" className="mb-24 max-w-3xl md:mb-32">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/50">
-            Selected works · 2021 — 2025
+            SELECTED WORKS · 2021 — 2026
           </p>
           <h2 className="mt-6 font-serif text-5xl font-light leading-[1.05] tracking-[-0.01em] md:text-6xl">
             Five rooms,
