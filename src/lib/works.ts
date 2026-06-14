@@ -60,11 +60,11 @@ export const works: Work[] = [
       "Editing and producing conversations across technology, governance, and public discourse.",
     image: work03,
     overview:
-      "Long-form audio work — editing, scoring, and producing interview programmes that sit at the intersection of technology policy, civic life, and the slower currents of public discourse.",
+      "Podcast Production brings together my experience in audio, video, and editorial storytelling. Across different projects, I have worked on recording, editing, sound design, and publishing conversations that engage with technology, society, and public life.\n\n\n\n\nThrough these experiences, I have become interested in how podcasts create spaces for dialogue and make complex ideas more accessible to broader audiences.",
     process:
-      "Most episodes are assembled from two- to three-hour conversations cut down to under an hour. The craft is in the silences kept and the asides removed. Sound design is restrained: a single room tone, a thin signature, no music underneath speech.",
+      "As Podcast Producer and Editor for PODS by PEI, I managed studio operations to ensure high-quality audio production. My work included recording sessions, sound design, editing episodes, and publishing them across digital platforms.\n\n\n\n\nBeyond production, I also hosted selected episodes that explored the relationship between technology and society. This experience helped me understand podcasting as both a technical and conversational medium.",
     reflection:
-      "Audio teaches a different relationship to time than image. A listener will give you twenty minutes of breath if the breath is honest. Most of the work is earning that.",
+      "Beyond production, I also hosted selected episodes that explored the relationship between technology and society. This experience helped me understand podcasting as both a technical and conversational medium.\n\n\n\n",
   },
   {
     slug: "research-photography",
