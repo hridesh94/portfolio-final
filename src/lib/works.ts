@@ -44,11 +44,11 @@ export const works: Work[] = [
       "Documentary works on clean cooking initiatives and environmental restoration in Nepal.",
     image: work02,
     overview:
-      "An ongoing body of short documentary work made alongside communities adopting electric and improved cookstoves across the mid-hills, and with restoration ecologists rewilding degraded watersheds.",
+      "The ASAM Community Project documents local efforts in environmental restoration and afforestation. Working closely with volunteers on the ground, the project focused on bringing forward stories from the community and their relationship with the landscape.\n\n\n\n\nMy role involved coordinating with field teams, shaping narratives, and translating community experiences into a visual story. Through conversations and observations, the documentary highlights how environmental initiatives are experienced by the people directly involved in them.\n\n\n\n\nThe work reflects an interest in community-centered storytelling, where local voices guide the narrative.",
     process:
-      "Each piece is shot small — one camera, available light, long conversations before any frame is captured. Editing favours pause over coverage. The cuts are slow because the subject is slow.",
+      "The documentary was developed through close collaboration with volunteers and community members. Rather than following a fixed script, the process evolved through field visits, conversations, and observations. This approach allowed the stories to emerge naturally from the people and places involved.\n\n\n\n\nThe final film brings together interviews, visual documentation, and moments from everyday life to present a grounded view of the community's work and experiences.",
     reflection:
-      "Documentary is, for me, a form of attention. The camera is a reason to stay longer than is polite, and the edit is a way of making that stay legible to someone who was never there.",
+      "Working on this project showed me the importance of listening before telling a story. Community narratives often exist in everyday experiences, and documenting them requires patience and trust. The process deepened my understanding of how media can support local voices and create spaces for shared experiences.\n\n\n\n\nAlongside this work, I also documented the impact of improved cookstoves in Bardiya, in western Nepal. Through conversations with local residents, I learned about daily life in the Terai region and how small technological changes can shape routines, health, and community life.",
   },
   {
     slug: "podcast-production",
