@@ -34,7 +34,7 @@ function Index() {
         <div className="flex flex-1 flex-col justify-between">
           <header className="rise-in">
             <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/50">
-              PORTFOLIO · 2026 · EDITION 01
+              {"\n"}
             </p>
             <h1 className="mt-10 font-serif text-[clamp(3.2rem,9vw,8.5rem)] font-light leading-[0.95] tracking-[-0.02em]">
               Hridesh
