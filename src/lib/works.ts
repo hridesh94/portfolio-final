@@ -32,7 +32,7 @@ export const works: Work[] = [
     process:
       "The website was developed using HTML, CSS, and vanilla JavaScript. Rather than reproducing a conventional article, the project was designed as an interactive experience where sound, movement, and narrative unfold together. The interactive Sarangi feature invites visitors to engage with the instrument not only as an object, but as a medium of storytelling.",
     reflection:
-      "I began the project asking what a medium is. I left it understanding that the Gandharva is not a folkloric relic but a precise technology, a mobile, embodied network whose protocols pre-date the ones we now take for granted.",
+      "This project made me think differently about media and storytelling. It showed me that media is not only technology but also people, traditions, and shared experiences. By bringing these stories to the web, I explored how digital tools can help preserve and share cultural heritage.",
   },
   {
     slug: "documentary-practice",
