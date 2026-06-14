@@ -25,7 +25,7 @@ export const works: Work[] = [
     medium: "INTERACTIVE STORYTELLING WEBSITE",
     year: "2026",
     description:
-      "A digital exploration of Nepal's Gandharva community and their historical role as transmitters of culture and information.",
+      "An interactive storytelling project exploring Nepal's Gandharva community and their historical role as carriers of stories, music, and news.",
     image: work01,
     overview:
       "Gaine, the Media Man traces the figure of the wandering Gandharva musician as an early form of mass media in Nepal — a body that carried news, gossip, lament, and history from village to village. The project translates that oral architecture into a scrolling, sound-led web piece.",
@@ -88,7 +88,7 @@ export const works: Work[] = [
     title: "Brand Identity and Visual Systems",
     medium: "Design Practice",
     year: "2021 — present",
-    description: "Identity systems exploring place, trust, and uncertainty.",
+    description: "Identity projects exploring place, trust, and the stories that shape organizations.",
     image: work05,
     overview:
       "Selected identity work for small institutions — a research collective, an independent bookshop, a community radio initiative. Each system is built from a small set of typographic and material decisions rather than a logo.",
