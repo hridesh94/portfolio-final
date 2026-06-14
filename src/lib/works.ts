@@ -62,9 +62,9 @@ export const works: Work[] = [
     overview:
       "Podcast Production brings together my experience in audio, video, and editorial storytelling. Across different projects, I have worked on recording, editing, sound design, and publishing conversations that engage with technology, society, and public life.\n\n\n\n\nThrough these experiences, I have become interested in how podcasts create spaces for dialogue and make complex ideas more accessible to broader audiences.",
     process:
-      "As Podcast Producer and Editor for PODS by PEI, I managed studio operations to ensure high-quality audio production. My work included recording sessions, sound design, editing episodes, and publishing them across digital platforms.\n\n\n\n\nBeyond production, I also hosted selected episodes that explored the relationship between technology and society. This experience helped me understand podcasting as both a technical and conversational medium.",
+      "As Podcast Producer and Editor for PODS by PEI, I managed studio operations to ensure high-quality audio production. My work included recording sessions, sound design, editing episodes, and publishing them across digital platforms. Beyond production, I also hosted selected episodes that explored the relationship between technology and society. This experience helped me understand podcasting as both a technical and conversational medium.\n\n\n\nI also worked on video podcasts such as Blockchain Socialist and Governance Futures. While Blockchain Socialist explored the political and social dimensions of technology, Governance Futures focused on policy, governance, and emerging technologies.\n\nMy role included video editing, thumbnail design, and shaping the narrative structure of each episode to ensure that complex discussions were communicated clearly and effectively.",
     reflection:
-      "Beyond production, I also hosted selected episodes that explored the relationship between technology and society. This experience helped me understand podcasting as both a technical and conversational medium.\n\n\n\n",
+      "Working in podcast production taught me that good storytelling is often an act of careful listening. Whether through sound, visuals, or conversation, my goal has been to make complex ideas more engaging and accessible to diverse audiences.",
   },
   {
     slug: "research-photography",
