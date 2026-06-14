@@ -215,10 +215,10 @@ function Index() {
         </Reveal>
 
         <div className="mt-24 grid gap-12 border-t border-rule pt-10 md:grid-cols-4">
-          <FooterItem label="Correspondence" value="hridesh@example.com" href="mailto:hridesh@example.com" />
+          <FooterItem label="Correspondence" value="hridesh.sap@gmail.com" href="mailto:hridesh.sap@gmail.com" />
           <FooterItem label="Curriculum Vitae" value="Download (PDF)" href="/cv.pdf" />
-          <FooterItem label="LinkedIn" value="linkedin.com/in/hridesh" href="https://linkedin.com" />
-          <FooterItem label="Source" value="github.com/hridesh" href="https://github.com" />
+          <FooterItem label="LinkedIn" value="linkedin.com/in/hrideshsapkota/" href="https://linkedin.com/in/hrideshsapkota/" />
+          <FooterItem label="Source" value="github.com/hrides94" href="https://github.com/hrides94" />
         </div>
 
         <div className="mt-20 flex flex-col gap-3 text-[10px] uppercase tracking-[0.28em] text-foreground/45 md:flex-row md:items-end md:justify-between">
