@@ -28,11 +28,11 @@ export const works: Work[] = [
       "An interactive storytelling project exploring Nepal's Gandharva community and their historical role as carriers of stories, music, and news.",
     image: work01,
     overview:
-      "Gaine, the Media Man traces the figure of the wandering Gandharva musician as an early form of mass media in Nepal — a body that carried news, gossip, lament, and history from village to village. The project translates that oral architecture into a scrolling, sound-led web piece.",
+      "Gaine, the Media Man is an interactive web project exploring the history and cultural role of Nepal's Gandharva community. Traditionally known as storytellers, musicians, and messengers, the Gandharvas carried news and memory through songs performed with the Sarangi.\n\nBuilt using vanilla JavaScript, the project combines oral history, visual storytelling, and interaction design. An interactive Sarangi element allows visitors to engage with the instrument's sound, creating a more direct connection to the community's musical tradition.\n\nThrough this work, I explore how digital media can preserve cultural heritage while creating new ways of experiencing it online.",
     process:
-      "The work was built across field recordings, archival photographs, and conversations with three sarangi players in Pokhara and Kathmandu. Their melodies became the page's rhythm; the visitor scrolls at the speed of a song, encountering text the way a listener once encountered news.",
+      "The website was developed using HTML, CSS, and vanilla JavaScript. Rather than reproducing a conventional article, the project was designed as an interactive experience where sound, movement, and narrative unfold together. The interactive Sarangi feature invites visitors to engage with the instrument not only as an object, but as a medium of storytelling.",
     reflection:
-      "I began the project asking what a medium is. I left it understanding that the Gandharva is not a folkloric relic but a precise technology — a mobile, embodied network whose protocols pre-date the ones we now take for granted.",
+      "I began the project asking what a medium is. I left it understanding that the Gandharva is not a folkloric relic but a precise technology, a mobile, embodied network whose protocols pre-date the ones we now take for granted.",
   },
   {
     slug: "documentary-practice",
