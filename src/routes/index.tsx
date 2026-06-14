@@ -156,53 +156,7 @@ function Index() {
         </div>
       </section>
 
-      <Divider label="III · Curriculum" />
-
-      {/* CV */}
-      <section id="cv" className="mx-auto max-w-[1480px] px-8 py-24 md:px-12 md:py-40">
-        <div className="grid gap-16 md:grid-cols-12">
-          <Reveal as="header" className="md:col-span-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/50">
-              III
-            </p>
-            <h2 className="mt-6 font-serif text-5xl font-light leading-none tracking-[-0.01em] md:text-7xl">
-              Curriculum
-            </h2>
-            <p className="mt-8 max-w-xs text-[14px] leading-[1.75] text-foreground/65">
-              A summary register of education, practice, and selected engagements. A full
-              document is available on request.
-            </p>
-          </Reveal>
-          <Reveal as="div" delay={150} className="md:col-span-7 md:col-start-6">
-            <CVBlock
-              heading="Practice"
-              rows={[
-                ["2022 — present", "Independent multimedia practice — Kathmandu"],
-                ["2023", "Documentary producer, clean cooking initiatives"],
-                ["2022 — present", "Editor & producer, long-form audio programmes"],
-                ["2021 — present", "Identity & editorial design for small institutions"],
-              ]}
-            />
-            <CVBlock
-              heading="Education"
-              rows={[
-                ["2024 — 2025", "Applying — MA, Interactive Media"],
-                ["2018 — 2022", "BA, Media & Communication Studies"],
-              ]}
-            />
-            <CVBlock
-              heading="Selected"
-              rows={[
-                ["2024", "Gaine, the Media Man — web exhibition"],
-                ["2023", "Research photography, Kathmandu Valley infrastructure"],
-                ["2022", "Audio essay series — public discourse & governance"],
-              ]}
-            />
-          </Reveal>
-        </div>
-      </section>
-
-      <Divider label="IV · Contact" />
+      <Divider label="III · Contact" />
 
       {/* Contact / Footer */}
       <footer id="contact" className="mx-auto max-w-[1480px] px-8 pb-16 pt-24 md:px-12 md:pb-20 md:pt-40">
