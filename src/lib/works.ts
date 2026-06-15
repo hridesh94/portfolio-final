@@ -9,6 +9,7 @@ export type WorkSegment = {
   body: string;
   image?: string;
   imageCaption?: string;
+  embedHtml?: string;
 };
 
 export type Work = {
@@ -24,6 +25,7 @@ export type Work = {
   reflection: string;
   url?: string;
   segments?: WorkSegment[];
+  secondaryImages?: string[];
 };
 
 export const works: Work[] = [
@@ -101,7 +103,7 @@ export const works: Work[] = [
     year: "2022 — present",
     description:
       "Editing and producing conversations across technology, governance, and public discourse.",
-    image: work03,
+    image: "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781511145/Photo_Jul_24_2023_rlhfyr.jpg",
     overview:
       "Podcast Production brings together my experience in audio, video, and editorial storytelling. Across different projects, I have worked on recording, editing, sound design, and publishing conversations that engage with technology, society, and public life.\n\n\n\n\nThrough these experiences, I have become interested in how podcasts create spaces for dialogue and make complex ideas more accessible to broader audiences.",
     process:
@@ -113,13 +115,23 @@ export const works: Work[] = [
         title: "PODS by PEI",
         body:
           "As Podcast Producer and Editor for PODS by PEI, I managed studio operations to ensure high-quality audio production. My work included recording sessions, sound design, editing episodes, and publishing them across digital platforms.\n\nBeyond production, I also hosted selected episodes that explored the relationship between technology and society. This experience helped me understand podcasting as both a technical and conversational medium.",
+        image: "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781511148/Photo_Aug_3_2023_pn35xn.jpg",
         imageCaption: "PODS by PEI — studio & production",
+        embedHtml: `<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://poddtoppen.se/podcast/1644664068/pods-by-pei/hem-sagar-on-the-beauty-of-birds-and-bird-watching" data-iframely-url="https://iframely.net/0KZyy6P9?theme=light"></a></div></div>`,
       },
       {
-        title: "Blockchain Socialist & Governance Futures",
+        title: "Blockchain Socialist",
         body:
-          "I also worked on video podcasts such as Blockchain Socialist and Governance Futures. While Blockchain Socialist explored the political and social dimensions of technology, Governance Futures focused on policy, governance, and emerging technologies.\n\nMy role included video editing, thumbnail design, and shaping the narrative structure of each episode to ensure that complex discussions were communicated clearly and effectively.",
-        imageCaption: "Blockchain Socialist & Governance Futures — video podcasts",
+          "I worked on the video podcast Blockchain Socialist, exploring the political and social dimensions of technology. My role included video editing, thumbnail design, and shaping the narrative structure of each episode to ensure that complex discussions were communicated clearly and effectively.",
+        imageCaption: "Blockchain Socialist — video podcast",
+        embedHtml: `<div class="aspect-video w-full overflow-hidden bg-muted"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/HhjfZxAF0cA" title="Blockchain Socialist" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="h-full w-full" /></div>`,
+      },
+      {
+        title: "Governance Futures",
+        body:
+          "Governance Futures focused on policy, governance, and emerging technologies. I was responsible for the video production and editorial flow, helping translate academic and policy-heavy discussions into engaging video content.",
+        imageCaption: "Governance Futures — video podcast",
+        embedHtml: `<div class="aspect-video w-full overflow-hidden bg-muted"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/x8YREa3mnK8" title="Governance Futures" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="h-full w-full" /></div>`,
       },
     ],
   },
@@ -131,13 +143,18 @@ export const works: Work[] = [
     year: "2023",
     description:
       "Photographic documentation and ground reporting of infrastructure projects in Kathmandu Valley.",
-    image: work04,
+    image: "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781507822/Nepal_Paper_Cover_Ideas_vrbelu.png",
+    url: "https://pei.center/all-publications/",
+    secondaryImages: [
+      "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781508348/Photo_Jan_2_2024_vqpmbd.jpg",
+      "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781508349/nagdhunga_tunel_xtgn9m.jpg",
+    ],
     overview:
-      "A documentary survey of half-finished public infrastructure across the Kathmandu Valley — flyovers paused mid-span, tunnels stalled, drainage culverts overtaken by monsoon. The photographs accompany written ground reports.",
+      "Photographs created for the research project Of Infrastructure Diplomacy & Development. I visited infrastructure projects across Nepal and documented them through photography. The images were later featured in the research publication.",
     process:
-      "Sites were visited repeatedly across a year. The frame stays at human height, the light is whatever the day offered, and captions are brief. The image is meant to be read alongside the document, not in place of it.",
+      "I travelled to different project sites and photographed roads, tunnels, hydropower projects, and construction work. The goal was to create visual records that supported the research and showed how infrastructure changes places and communities.",
     reflection:
-      "Infrastructure photography risks two failures: the heroic and the indignant. I tried for a third register — patient, unembarrassed, willing to let a stalled pillar simply be a stalled pillar.",
+      "Research often explains infrastructure through reports and data. Photography helps show the people, landscapes, and spaces behind these projects.",
   },
   {
     slug: "brand-identity-and-visual-systems",
@@ -146,9 +163,25 @@ export const works: Work[] = [
     medium: "Design Practice",
     year: "2021 — present",
     description: "Identity projects exploring place, trust, and the stories that shape organizations.",
-    image: work05,
+    image: "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781507293/TLA_Brand_Guidelines_rj5mkn.png",
     overview:
-      "Selected identity work for small institutions — a research collective, an independent bookshop, a community radio initiative. Each system is built from a small set of typographic and material decisions rather than a logo.",
+      "Selected identity work for small institutions and businesses. These projects focus on typography, colour, and visual systems rather than logos alone. Each identity is built to reflect the values and context of the organisation.",
+    segments: [
+      {
+        title: "Tempus Lake Capital",
+        body:
+          "Developed the logo and brand guidelines for a finance company. The visual identity was inspired by the landscape of Lake Como, combining natural imagery with a sense of stability and long-term growth. The logo was traced and refined to maintain a balance between elegance and financial credibility.",
+        image: "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781507290/TLA_Logo_nj98wf.png",
+        imageCaption: "Tempus Lake Capital — logo & identity",
+      },
+      {
+        title: "Bharosa",
+        body:
+          "Created the identity for a Nepali real estate company. The logo draws from the form of a home, reflecting ideas of trust and belonging. The colour palette was inspired by traditional Nepali terracotta bricks, using warm tones to create a sense of familiarity and comfort.",
+        image: "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781507142/bharosa_owr0wp.png",
+        imageCaption: "Bharosa — identity & color system",
+      },
+    ],
     process:
       "I begin with a list of words the institution would never use about itself. The visual system follows from that refusal. Typography is usually the first decision; colour is almost always the last.",
     reflection:

@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { SiteNav } from "@/components/SiteNav";
 import { Reveal } from "@/components/Reveal";
 import { works, worksBySlug, type WorkSegment } from "@/lib/works";
@@ -53,6 +54,19 @@ function WorkPage() {
   const idx = works.findIndex((w) => w.slug === work.slug);
   const next = works[(idx + 1) % works.length];
 
+  useEffect(() => {
+    // Load Iframely script if there are any iframely embeds
+    if (document.querySelector(".iframely-embed")) {
+      const script = document.createElement("script");
+      script.src = "https://iframely.net/embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+      return () => {
+        document.body.removeChild(script);
+      };
+    }
+  }, [work]);
+
   return (
     <main className="grain min-h-screen">
       <SiteNav />
@@ -74,9 +88,6 @@ function WorkPage() {
           <h1 className="mt-12 font-serif text-[clamp(2.6rem,7vw,6rem)] font-light leading-[1] tracking-[-0.02em]">
             {work.title}
           </h1>
-          <p className="mt-8 font-sans text-[12px] uppercase tracking-[0.12em] text-foreground/55">
-            {work.medium} · {work.year}
-          </p>
         </header>
 
         {/* Hero plate */}
@@ -104,9 +115,22 @@ function WorkPage() {
               />
             </div>
           )}
-          <figcaption className="mt-4 font-sans text-[11px] tracking-[0.12em] text-foreground/45">
-            Plate I — {work.title}
-          </figcaption>
+          <div className="mt-4 flex items-center justify-between">
+            <figcaption className="font-sans text-[11px] tracking-[0.12em] text-foreground/45">
+              Plate I — {work.title}
+            </figcaption>
+            {work.url && (
+              <a
+                href={work.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-[#c15a3e] text-white rounded-full font-sans text-[11px] uppercase tracking-[0.2em] hover:bg-[#a84e34] transition-all group shadow-sm"
+              >
+                <span className="font-medium">Live Demo</span>
+                <span className="italic opacity-80 group-hover:opacity-100 transition-opacity">→</span>
+              </a>
+            )}
+          </div>
         </Reveal>
 
         {/* Overview */}
@@ -148,22 +172,29 @@ function WorkPage() {
                 <figure
                   className={`plate md:col-span-6 ${i % 2 === 1 ? "md:order-2" : ""}`}
                 >
-                  <div className="aspect-[4/3] overflow-hidden bg-muted">
-                    {seg.image ? (
+                  {seg.image ? (
+                    <div className="aspect-[4/3] overflow-hidden bg-muted">
                       <img
                         src={seg.image}
                         alt={seg.title}
                         loading="lazy"
                         className="h-full w-full object-cover"
                       />
-                    ) : (
+                    </div>
+                  ) : seg.embedHtml ? (
+                    <div
+                      className="w-full"
+                      dangerouslySetInnerHTML={{ __html: seg.embedHtml }}
+                    />
+                  ) : (
+                    <div className="aspect-[4/3] overflow-hidden bg-muted">
                       <div className="flex h-full w-full items-center justify-center bg-muted">
                         <span className="font-sans text-[11px] uppercase tracking-[0.12em] text-foreground/40">
                           Image — coming soon
                         </span>
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
                   {seg.imageCaption && (
                     <figcaption className="mt-4 font-sans text-[11px] tracking-[0.12em] text-foreground/45">
                       {seg.imageCaption}
@@ -182,6 +213,12 @@ function WorkPage() {
                       <p key={j}>{para}</p>
                     ))}
                   </div>
+                  {seg.embedHtml && seg.image && (
+                    <div
+                      className="mt-8"
+                      dangerouslySetInnerHTML={{ __html: seg.embedHtml }}
+                    />
+                  )}
                 </div>
               </Reveal>
             ))}
@@ -193,7 +230,7 @@ function WorkPage() {
               <Reveal as="figure" className="plate md:col-span-7">
                 <div className="aspect-[4/3] overflow-hidden bg-muted">
                   <img
-                    src={work.image}
+                    src={work.secondaryImages?.[0] || work.image}
                     alt=""
                     width={1200}
                     height={900}
@@ -205,7 +242,7 @@ function WorkPage() {
               <Reveal as="figure" delay={150} className="plate md:col-span-5 md:mt-24">
                 <div className="aspect-[3/4] overflow-hidden bg-muted">
                   <img
-                    src={work.image}
+                    src={work.secondaryImages?.[1] || work.image}
                     alt=""
                     width={900}
                     height={1200}

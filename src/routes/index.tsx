@@ -52,12 +52,6 @@ function Index() {
               and design. My work explores the relationship between media, culture, and
               emerging technologies.
             </p>
-            <a
-              href="#work"
-              className="group inline-flex items-center gap-4 font-sans text-[12px] uppercase tracking-[0.12em] text-foreground/70 transition-opacity hover:opacity-60"
-            >
-              <span className="h-px w-12 bg-foreground/40 transition-all duration-700 group-hover:w-20" />
-            </a>
           </div>
         </div>
 
@@ -71,13 +65,8 @@ function Index() {
       {/* Work */}
       <section id="work" className="mx-auto max-w-[1480px] px-8 py-24 md:px-12 md:py-40">
         <Reveal as="header" className="mb-24 max-w-3xl md:mb-32">
-          <p className="font-sans text-[11px] uppercase tracking-[0.12em] text-foreground/50">
-            SELECTED WORKS · 2021 — 2026
-          </p>
           <h2 className="mt-6 font-serif text-5xl font-light leading-[1.05] tracking-[-0.01em] md:text-6xl">
-            Five rooms,
-            <br />
-            <span className="italic">arranged in sequence.</span>
+            Selected Projects
           </h2>
         </Reveal>
 
@@ -135,19 +124,15 @@ function Index() {
               II
             </p>
             <h2 className="mt-6 font-serif text-5xl font-light leading-none tracking-[-0.01em] md:text-7xl">
-              Ethos
+              My Ethos
             </h2>
           </Reveal>
           <Reveal as="div" delay={150} className="md:col-span-7 md:col-start-6">
             <p className="font-serif text-2xl font-light leading-[1.45] text-foreground/85 md:text-[1.9rem]">
-              I am interested in how media mediates human experience. Whether through code,
-              film, sound, or design, I approach technology not merely as a tool but as a
-              cultural force that shapes memory, public life, and imagination.
+              I am interested in how media shapes human experience. Through code, film, sound, and design, I explore how technology influences culture and everyday life.
             </p>
             <p className="mt-10 max-w-2xl text-[16px] leading-[1.85] text-foreground/70">
-              This practice is informed by an interest in storytelling, digital culture, and
-              the ways emerging technologies alter how societies communicate and understand
-              themselves.
+              My practice is guided by an interest in storytelling, digital culture, and the ways technology changes how people communicate and understand the world around them.
             </p>
           </Reveal>
         </div>
@@ -167,7 +152,7 @@ function Index() {
 
         <div className="mt-24 grid gap-12 border-t border-rule pt-10 md:grid-cols-4">
           <FooterItem label="EMAIL" value="hridesh.sap@gmail.com" href="mailto:hridesh.sap@gmail.com" />
-          
+
           <FooterItem label="LinkedIn" value="linkedin.com/in/hrideshsapkota/" href="https://linkedin.com/in/hrideshsapkota/" />
           <FooterItem label="Source" value="github.com/hrides94" href="https://github.com/hrides94" />
         </div>

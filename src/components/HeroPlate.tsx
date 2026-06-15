@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import hero1 from "@/assets/hero-1.jpg";
-import hero2 from "@/assets/hero-2.jpg";
-import hero3 from "@/assets/hero-3.jpg";
-
-const images = [hero1, hero2, hero3];
+const images = [
+  "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781514089/Photo_Mar_28_2026_znf56q.jpg",
+  "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781514001/Photo_Jul_25_2024_expmjo.jpg",
+  "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781506694/Photo_Apr_22_2024_aq034e.jpg",
+];
 
 export function HeroPlate() {
   const [i, setI] = useState(0);
