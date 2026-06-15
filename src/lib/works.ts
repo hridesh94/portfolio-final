@@ -1,8 +1,4 @@
-import work01 from "@/assets/work-01.jpg";
-import work02 from "@/assets/work-02.jpg";
-import work03 from "@/assets/work-03.jpg";
-import work04 from "@/assets/work-04.jpg";
-import work05 from "@/assets/work-05.jpg";
+
 
 export type WorkSegment = {
   title: string;
