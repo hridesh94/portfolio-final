@@ -22,6 +22,7 @@ export type Work = {
   overview: string;
   process: string;
   reflection: string;
+  url?: string;
   segments?: WorkSegment[];
 };
 
@@ -34,13 +35,30 @@ export const works: Work[] = [
     year: "2026",
     description:
       "An interactive storytelling project exploring Nepal's Gandharva community and their historical role as carriers of stories, music, and news.",
-    image: work01,
+    image: "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781506833/homeapge-_gaine_rspb0f.png",
+    url: "https://gandarva.pages.dev/",
     overview:
       "Gaine, the Media Man is an interactive web project exploring the history and cultural role of Nepal's Gandharva community. Traditionally known as storytellers, musicians, and messengers, the Gandharvas carried news and memory through songs performed with the Sarangi.\n\nBuilt using vanilla JavaScript, the project combines oral history, visual storytelling, and interaction design. An interactive Sarangi element allows visitors to engage with the instrument's sound, creating a more direct connection to the community's musical tradition.\n\nThrough this work, I explore how digital media can preserve cultural heritage while creating new ways of experiencing it online.",
     process:
       "The website was developed using HTML, CSS, and vanilla JavaScript. Rather than reproducing a conventional article, the project was designed as an interactive experience where sound, movement, and narrative unfold together. The interactive Sarangi feature invites visitors to engage with the instrument not only as an object, but as a medium of storytelling.",
     reflection:
       "This project made me think differently about media and storytelling. It showed me that media is not only technology but also people, traditions, and shared experiences. By bringing these stories to the web, I explored how digital tools can help preserve and share cultural heritage.",
+    segments: [
+      {
+        title: "Visual Storytelling",
+        body:
+          "The project balances rich visual imagery with narrative depth, creating a cohesive experience where images and storytelling work together to explore the cultural heritage of the Gandharva community.",
+        image: "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781506831/gaine_ix7ef5.png",
+        imageCaption: "Balancing visual narrative with cultural storytelling",
+      },
+      {
+        title: "Interactive Sound Design",
+        body:
+          "At the heart of the experience lies an interactive Sarangi element that emulates the authentic sound of traditional strings. This feature transforms the website into an instrument, inviting visitors to actively engage with the musical traditions central to Gandharva culture.",
+        image: "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781506836/sarangi_interactive_eywabg.png",
+        imageCaption: "Interactive Sarangi element with authentic string sound emulation",
+      },
+    ],
   },
   {
     slug: "documentary-practice",
@@ -50,13 +68,30 @@ export const works: Work[] = [
     year: "2024",
     description:
       "Documentary works on clean cooking initiatives and environmental restoration in Nepal.",
-    image: work02,
+    image: "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781506694/Photo_Apr_22_2024_aq034e.jpg",
+    url: "https://www.youtube.com/watch?v=R1bWnLm5xkQ",
     overview:
       "The ASAM Community Project documents local efforts in environmental restoration and afforestation. Working closely with volunteers on the ground, the project focused on bringing forward stories from the community and their relationship with the landscape.\n\n\n\n\nMy role involved coordinating with field teams, shaping narratives, and translating community experiences into a visual story. Through conversations and observations, the documentary highlights how environmental initiatives are experienced by the people directly involved in them.\n\n\n\n\nThe work reflects an interest in community-centered storytelling, where local voices guide the narrative.",
     process:
       "The documentary was developed through close collaboration with volunteers and community members. Rather than following a fixed script, the process evolved through field visits, conversations, and observations. This approach allowed the stories to emerge naturally from the people and places involved.\n\n\n\n\nThe final film brings together interviews, visual documentation, and moments from everyday life to present a grounded view of the community's work and experiences.",
     reflection:
       "Working on this project showed me the importance of listening before telling a story. Community narratives often exist in everyday experiences, and documenting them requires patience and trust. The process deepened my understanding of how media can support local voices and create spaces for shared experiences.\n\n\n\n\nAlongside this work, I also documented the impact of improved cookstoves in Bardiya, in western Nepal. Through conversations with local residents, I learned about daily life in the Terai region and how small technological changes can shape routines, health, and community life.",
+    segments: [
+      {
+        title: "Greening India Initiative",
+        body:
+          "A short documentary production for OYU Green exploring the greening initiatives in Assam. The film documents the environmental restoration efforts and community engagement in the region.",
+        image: "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781506694/Photo_Apr_22_2024_aq034e.jpg",
+        imageCaption: "Greening India initiative, an Assam-based short documentary production for OYU Green",
+      },
+      {
+        title: "Community Engagement",
+        body:
+          "Working directly with local communities to document their environmental restoration efforts and the stories behind them. These moments capture the dedication and commitment of volunteers on the ground.",
+        image: "https://res.cloudinary.com/dj7hwtgxy/image/upload/v1781506694/Photo_Apr_22_2024_1_aftyig.jpg",
+        imageCaption: "Community members working on environmental restoration initiatives",
+      },
+    ],
   },
   {
     slug: "podcast-production",

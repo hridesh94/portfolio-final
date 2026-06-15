@@ -25,7 +25,7 @@ export const Route = createFileRoute("/work/$slug")({
   notFoundComponent: () => (
     <div className="flex min-h-screen items-center justify-center px-8 text-center">
       <div>
-        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/50">
+        <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-foreground/50">
           Not in this exhibition
         </p>
         <h1 className="mt-6 font-serif text-5xl font-light">Work not found</h1>
@@ -39,7 +39,7 @@ export const Route = createFileRoute("/work/$slug")({
     <div className="flex min-h-screen items-center justify-center px-8 text-center">
       <div>
         <h1 className="font-serif text-3xl">Something interrupted the reading.</h1>
-        <button onClick={reset} className="story-link mt-6 font-mono text-xs uppercase tracking-[0.28em]">
+        <button onClick={reset} className="story-link mt-6 font-sans text-xs uppercase tracking-[0.12em]">
           Try again
         </button>
       </div>
@@ -63,47 +63,79 @@ function WorkPage() {
           <div className="flex items-baseline gap-6">
             <Link
               to="/"
-              className="font-mono text-[10px] uppercase tracking-[0.28em] text-foreground/55 hover:opacity-60"
+              className="font-sans text-[11px] uppercase tracking-[0.12em] text-foreground/55 hover:opacity-60"
             >
               ← Index
             </Link>
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/45">
+            <span className="font-sans text-[11px] uppercase tracking-[0.15em] text-foreground/45">
               Work {work.number}
             </span>
           </div>
           <h1 className="mt-12 font-serif text-[clamp(2.6rem,7vw,6rem)] font-light leading-[1] tracking-[-0.02em]">
             {work.title}
           </h1>
-          <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.28em] text-foreground/55">
+          <p className="mt-8 font-sans text-[12px] uppercase tracking-[0.12em] text-foreground/55">
             {work.medium} · {work.year}
           </p>
         </header>
 
         {/* Hero plate */}
         <Reveal as="figure" className="plate mx-auto max-w-[1180px]">
-          <div className="aspect-[16/10] overflow-hidden bg-muted">
-            <img
-              src={work.image}
-              alt={work.title}
-              width={1920}
-              height={1200}
-              className="h-full w-full object-cover"
-            />
-          </div>
-          <figcaption className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-foreground/45">
+          {work.url ? (
+            <a href={work.url} target="_blank" rel="noopener noreferrer" className="block cursor-pointer hover:opacity-90 transition-opacity">
+              <div className="aspect-[16/10] overflow-hidden bg-muted">
+                <img
+                  src={work.image}
+                  alt={work.title}
+                  width={1920}
+                  height={1200}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </a>
+          ) : (
+            <div className="aspect-[16/10] overflow-hidden bg-muted">
+              <img
+                src={work.image}
+                alt={work.title}
+                width={1920}
+                height={1200}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          )}
+          <figcaption className="mt-4 font-sans text-[11px] tracking-[0.12em] text-foreground/45">
             Plate I — {work.title}
           </figcaption>
         </Reveal>
 
         {/* Overview */}
         <Reveal as="section" className="mx-auto mt-32 grid max-w-5xl gap-12 md:grid-cols-12 md:mt-44">
-          <h2 className="md:col-span-3 font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/55">
+          <h2 className="md:col-span-3 font-sans text-[11px] uppercase tracking-[0.15em] text-foreground/55">
             Overview
           </h2>
           <p className="md:col-span-9 font-serif text-2xl font-light leading-[1.5] text-foreground/85 md:text-[1.7rem]">
             {work.overview}
           </p>
         </Reveal>
+
+        {/* YouTube Player */}
+        {work.url && work.url.includes("youtube.com") && (
+          <Reveal as="section" className="mx-auto mt-32 max-w-[1180px] md:mt-44">
+            <div className="aspect-video w-full overflow-hidden bg-muted">
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${new URL(work.url).searchParams.get("v")}`}
+                title={work.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full"
+              />
+            </div>
+          </Reveal>
+        )}
 
         {work.segments && work.segments.length > 0 ? (
           <div className="mx-auto mt-32 max-w-[1180px] md:mt-44">
@@ -126,20 +158,20 @@ function WorkPage() {
                       />
                     ) : (
                       <div className="flex h-full w-full items-center justify-center bg-muted">
-                        <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-foreground/40">
+                        <span className="font-sans text-[11px] uppercase tracking-[0.12em] text-foreground/40">
                           Image — coming soon
                         </span>
                       </div>
                     )}
                   </div>
                   {seg.imageCaption && (
-                    <figcaption className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-foreground/45">
+                    <figcaption className="mt-4 font-sans text-[11px] tracking-[0.12em] text-foreground/45">
                       {seg.imageCaption}
                     </figcaption>
                   )}
                 </figure>
                 <div className="md:col-span-6 md:self-center">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/55">
+                  <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-foreground/55">
                     Chapter · {String(i + 1).padStart(2, "0")}
                   </p>
                   <h3 className="mt-4 font-serif text-3xl font-light leading-[1.15] tracking-[-0.01em] md:text-4xl">
@@ -186,7 +218,7 @@ function WorkPage() {
 
             {/* Process */}
             <Reveal as="section" className="mx-auto mt-32 grid max-w-5xl gap-12 md:mt-44 md:grid-cols-12">
-              <h2 className="md:col-span-3 font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/55">
+              <h2 className="md:col-span-3 font-sans text-[11px] uppercase tracking-[0.15em] text-foreground/55">
                 Process
               </h2>
               <p className="md:col-span-9 text-[17px] leading-[1.9] text-foreground/80">
@@ -198,7 +230,7 @@ function WorkPage() {
 
         {/* Reflection */}
         <Reveal as="section" className="mx-auto mt-24 grid max-w-5xl gap-12 md:mt-32 md:grid-cols-12">
-          <h2 className="md:col-span-3 font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/55">
+          <h2 className="md:col-span-3 font-sans text-[11px] uppercase tracking-[0.15em] text-foreground/55">
             Reflection
           </h2>
           <p className="md:col-span-9 font-serif text-2xl font-light italic leading-[1.55] text-foreground/85 md:text-[1.8rem]">
@@ -213,13 +245,13 @@ function WorkPage() {
             params={{ slug: next.slug }}
             className="group flex flex-col gap-3"
           >
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/50">
+            <span className="font-sans text-[11px] uppercase tracking-[0.15em] text-foreground/50">
               Next · {next.number}
             </span>
             <span className="font-serif text-4xl font-light tracking-[-0.01em] transition-opacity group-hover:opacity-60 md:text-6xl">
               {next.title} <span className="italic text-foreground/55">→</span>
             </span>
-            <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-foreground/50">
+            <span className="font-sans text-[12px] uppercase tracking-[0.12em] text-foreground/50">
               {next.medium}
             </span>
           </Link>

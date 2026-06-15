@@ -25,7 +25,7 @@ export function HeroPlate() {
           loading={idx === 0 ? "eager" : "lazy"}
         />
       ))}
-      <figcaption className="absolute bottom-3 left-3 font-mono text-[10px] uppercase tracking-[0.25em] text-foreground/50">
+      <figcaption className="absolute bottom-3 left-3 font-sans text-[11px] tracking-[0.12em] text-foreground/50">
         Plate {String(i + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
       </figcaption>
     </figure>
