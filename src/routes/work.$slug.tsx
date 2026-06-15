@@ -40,7 +40,10 @@ export const Route = createFileRoute("/work/$slug")({
     <div className="flex min-h-screen items-center justify-center px-8 text-center">
       <div>
         <h1 className="font-serif text-3xl">Something interrupted the reading.</h1>
-        <button onClick={reset} className="story-link mt-6 font-sans text-xs uppercase tracking-[0.12em]">
+        <button
+          onClick={reset}
+          className="story-link mt-6 font-sans text-xs uppercase tracking-[0.12em]"
+        >
           Try again
         </button>
       </div>
@@ -93,7 +96,12 @@ function WorkPage() {
         {/* Hero plate */}
         <Reveal as="figure" className="plate mx-auto max-w-[1180px]">
           {work.url ? (
-            <a href={work.url} target="_blank" rel="noopener noreferrer" className="block cursor-pointer hover:opacity-90 transition-opacity">
+            <a
+              href={work.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block cursor-pointer hover:opacity-90 transition-opacity"
+            >
               <div className="aspect-[16/10] overflow-hidden bg-muted">
                 <img
                   src={work.image}
@@ -127,14 +135,19 @@ function WorkPage() {
                 className="inline-flex items-center gap-3 px-6 py-3 bg-[#c15a3e] text-white rounded-full font-sans text-[11px] uppercase tracking-[0.2em] hover:bg-[#a84e34] transition-all group shadow-sm"
               >
                 <span className="font-medium">Live Demo</span>
-                <span className="italic opacity-80 group-hover:opacity-100 transition-opacity">→</span>
+                <span className="italic opacity-80 group-hover:opacity-100 transition-opacity">
+                  →
+                </span>
               </a>
             )}
           </div>
         </Reveal>
 
         {/* Overview */}
-        <Reveal as="section" className="mx-auto mt-32 grid max-w-5xl gap-12 md:grid-cols-12 md:mt-44">
+        <Reveal
+          as="section"
+          className="mx-auto mt-32 grid max-w-5xl gap-12 md:grid-cols-12 md:mt-44"
+        >
           <h2 className="md:col-span-3 font-sans text-[11px] uppercase tracking-[0.15em] text-foreground/55">
             Overview
           </h2>
@@ -169,9 +182,7 @@ function WorkPage() {
                 key={seg.title}
                 className={`grid gap-10 md:grid-cols-12 md:gap-14 ${i > 0 ? "mt-32 md:mt-44" : ""}`}
               >
-                <figure
-                  className={`plate md:col-span-6 ${i % 2 === 1 ? "md:order-2" : ""}`}
-                >
+                <figure className={`plate md:col-span-6 ${i % 2 === 1 ? "md:order-2" : ""}`}>
                   {seg.image ? (
                     <div className="aspect-[4/3] overflow-hidden bg-muted">
                       <img
@@ -182,10 +193,7 @@ function WorkPage() {
                       />
                     </div>
                   ) : seg.embedHtml ? (
-                    <div
-                      className="w-full"
-                      dangerouslySetInnerHTML={{ __html: seg.embedHtml }}
-                    />
+                    <div className="w-full" dangerouslySetInnerHTML={{ __html: seg.embedHtml }} />
                   ) : (
                     <div className="aspect-[4/3] overflow-hidden bg-muted">
                       <div className="flex h-full w-full items-center justify-center bg-muted">
@@ -214,10 +222,7 @@ function WorkPage() {
                     ))}
                   </div>
                   {seg.embedHtml && seg.image && (
-                    <div
-                      className="mt-8"
-                      dangerouslySetInnerHTML={{ __html: seg.embedHtml }}
-                    />
+                    <div className="mt-8" dangerouslySetInnerHTML={{ __html: seg.embedHtml }} />
                   )}
                 </div>
               </Reveal>
@@ -254,7 +259,10 @@ function WorkPage() {
             </div>
 
             {/* Process */}
-            <Reveal as="section" className="mx-auto mt-32 grid max-w-5xl gap-12 md:mt-44 md:grid-cols-12">
+            <Reveal
+              as="section"
+              className="mx-auto mt-32 grid max-w-5xl gap-12 md:mt-44 md:grid-cols-12"
+            >
               <h2 className="md:col-span-3 font-sans text-[11px] uppercase tracking-[0.15em] text-foreground/55">
                 Process
               </h2>
@@ -266,7 +274,10 @@ function WorkPage() {
         )}
 
         {/* Reflection */}
-        <Reveal as="section" className="mx-auto mt-24 grid max-w-5xl gap-12 md:mt-32 md:grid-cols-12">
+        <Reveal
+          as="section"
+          className="mx-auto mt-24 grid max-w-5xl gap-12 md:mt-32 md:grid-cols-12"
+        >
           <h2 className="md:col-span-3 font-sans text-[11px] uppercase tracking-[0.15em] text-foreground/55">
             Reflection
           </h2>
@@ -277,11 +288,7 @@ function WorkPage() {
 
         {/* Next */}
         <nav className="mx-auto mt-40 max-w-5xl border-t border-rule pt-10 md:mt-56">
-          <Link
-            to="/work/$slug"
-            params={{ slug: next.slug }}
-            className="group flex flex-col gap-3"
-          >
+          <Link to="/work/$slug" params={{ slug: next.slug }} className="group flex flex-col gap-3">
             <span className="font-sans text-[11px] uppercase tracking-[0.15em] text-foreground/50">
               Next · {next.number}
             </span>

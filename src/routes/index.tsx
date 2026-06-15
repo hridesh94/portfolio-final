@@ -16,8 +16,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Hridesh — Media, technology, and stories" },
       {
         property: "og:description",
-        content:
-          "A small digital exhibition of interactive, documentary, audio, and design work.",
+        content: "A small digital exhibition of interactive, documentary, audio, and design work.",
       },
     ],
   }),
@@ -48,9 +47,9 @@ function Index() {
 
           <div className="mt-16 grid gap-10 lg:mt-0 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-20">
             <p className="max-w-md text-[15px] leading-[1.8] text-foreground/75">
-              I work across interactive storytelling, documentary practice, audio production,
-              and design. My work explores the relationship between media, culture, and
-              emerging technologies.
+              I work across interactive storytelling, documentary practice, audio production, and
+              design. My work explores the relationship between media, culture, and emerging
+              technologies.
             </p>
           </div>
         </div>
@@ -90,9 +89,7 @@ function Index() {
                     </h3>
                   </div>
                   <div className="md:col-span-3">
-                    <p className="text-[15px] leading-[1.75] text-foreground/75">
-                      {w.description}
-                    </p>
+                    <p className="text-[15px] leading-[1.75] text-foreground/75">{w.description}</p>
                   </div>
                   <figure className="plate md:col-span-4">
                     <div className="aspect-[4/3] overflow-hidden bg-muted">
@@ -129,10 +126,12 @@ function Index() {
           </Reveal>
           <Reveal as="div" delay={150} className="md:col-span-7 md:col-start-6">
             <p className="font-serif text-2xl font-light leading-[1.45] text-foreground/85 md:text-[1.9rem]">
-              I am interested in how media shapes human experience. Through code, film, sound, and design, I explore how technology influences culture and everyday life.
+              I am interested in how media shapes human experience. Through code, film, sound, and
+              design, I explore how technology influences culture and everyday life.
             </p>
             <p className="mt-10 max-w-2xl text-[16px] leading-[1.85] text-foreground/70">
-              My practice is guided by an interest in storytelling, digital culture, and the ways technology changes how people communicate and understand the world around them.
+              My practice is guided by an interest in storytelling, digital culture, and the ways
+              technology changes how people communicate and understand the world around them.
             </p>
           </Reveal>
         </div>
@@ -141,7 +140,10 @@ function Index() {
       <Divider label="III · Contact" />
 
       {/* Contact / Footer */}
-      <footer id="contact" className="mx-auto max-w-[1480px] px-8 pb-16 pt-24 md:px-12 md:pb-20 md:pt-40">
+      <footer
+        id="contact"
+        className="mx-auto max-w-[1480px] px-8 pb-16 pt-24 md:px-12 md:pb-20 md:pt-40"
+      >
         <Reveal>
           <h2 className="font-serif text-5xl font-light leading-[1] tracking-[-0.01em] md:text-[7rem]">
             Write,
@@ -151,10 +153,22 @@ function Index() {
         </Reveal>
 
         <div className="mt-24 grid gap-12 border-t border-rule pt-10 md:grid-cols-4">
-          <FooterItem label="EMAIL" value="hridesh.sap@gmail.com" href="mailto:hridesh.sap@gmail.com" />
+          <FooterItem
+            label="EMAIL"
+            value="hridesh.sap@gmail.com"
+            href="mailto:hridesh.sap@gmail.com"
+          />
 
-          <FooterItem label="LinkedIn" value="linkedin.com/in/hrideshsapkota/" href="https://linkedin.com/in/hrideshsapkota/" />
-          <FooterItem label="Source" value="github.com/hrides94" href="https://github.com/hrides94" />
+          <FooterItem
+            label="LinkedIn"
+            value="linkedin.com/in/hrideshsapkota/"
+            href="https://linkedin.com/in/hrideshsapkota/"
+          />
+          <FooterItem
+            label="Source"
+            value="github.com/hrides94"
+            href="https://github.com/hrides94"
+          />
         </div>
 
         <div className="mt-20 flex flex-col gap-3 text-[11px] uppercase tracking-[0.12em] text-foreground/45 md:flex-row md:items-end md:justify-between">

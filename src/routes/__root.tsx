@@ -93,11 +93,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: "Hridesh — Media, technology, and stories" },
-      { name: "description", content: "A digital exhibition space showcasing multimedia work with an art gallery aesthetic." },
-      { property: "og:description", content: "A digital exhibition space showcasing multimedia work with an art gallery aesthetic." },
-      { name: "twitter:description", content: "A digital exhibition space showcasing multimedia work with an art gallery aesthetic." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1ea264ff-74f4-46b0-9ce6-b95d406a40d3/id-preview-a972b0dd--cb2461c8-83bd-46a3-943d-78e161f07a5f.lovable.app-1781439341124.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1ea264ff-74f4-46b0-9ce6-b95d406a40d3/id-preview-a972b0dd--cb2461c8-83bd-46a3-943d-78e161f07a5f.lovable.app-1781439341124.png" },
+      {
+        name: "description",
+        content:
+          "A digital exhibition space showcasing multimedia work with an art gallery aesthetic.",
+      },
+      {
+        property: "og:description",
+        content:
+          "A digital exhibition space showcasing multimedia work with an art gallery aesthetic.",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "A digital exhibition space showcasing multimedia work with an art gallery aesthetic.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1ea264ff-74f4-46b0-9ce6-b95d406a40d3/id-preview-a972b0dd--cb2461c8-83bd-46a3-943d-78e161f07a5f.lovable.app-1781439341124.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1ea264ff-74f4-46b0-9ce6-b95d406a40d3/id-preview-a972b0dd--cb2461c8-83bd-46a3-943d-78e161f07a5f.lovable.app-1781439341124.png",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
